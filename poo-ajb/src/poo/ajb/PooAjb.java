@@ -16,7 +16,17 @@ public class PooAjb {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        system.out.println("HOLA MUNDO");
+        System.out.println("HOLA MUNDO");
+        
+        //Tenemos que generar los objetos de las clases anteriore
+        Usuario x=new Usuario();
+        x.altura=1.70f;
+        x.peso=70f;
+        Imc algo=new Imc ();
+        algo.u=x;
+        //Calculasmos el Imc atravez del objeto
+        System.out.println(algo.calcular());
+        
     }
     
 }
