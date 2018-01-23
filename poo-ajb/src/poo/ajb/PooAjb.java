@@ -20,8 +20,8 @@ public class PooAjb {
         
         //Tenemos que generar los objetos de las clases anteriore
         Usuario x=new Usuario();
-        x.altura=1.70f;
-        x.peso=70f;
+        x.setAltura(1.70f);
+        x.setPeso(70f);
         Imc algo=new Imc ();
         algo.u=x;
         //Calculasmos el Imc atravez del objeto
