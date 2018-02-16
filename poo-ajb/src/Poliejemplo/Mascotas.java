@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Poliejemplo;
-
+import java.util.*;
 /**
  *
  * @author T-102
@@ -12,7 +12,7 @@ package Poliejemplo;
 public class Mascotas {
     public static void main(String[] args) {
        //Primero Generamos a los Gatos       
-      // Comportamiento animales[]=new ¿? [10]; como queda este renglos jajaj
+       Animal animales[]= new Animal [13];
        animales[0]=new Gato();
        animales[1]=new Gato();
        animales[2]=new Gato();
@@ -25,11 +25,29 @@ public class Mascotas {
        animales[7]=new Pollo();
        animales[8]=new Pollo();
        animales[9]=new Pollo();
-       //mnagia del polimorfismo        
-       for(Comportamineto animal:animales){
-           System.out.println("animal.hacerRuido()");
+       
+       animales[10]=new Raton();
+       animales[11]=new Raton();
+       animales[12]=new Raton();
+       //mnagia del polimorfismo    
+       ServicioAnimales s = new ServicioAnimales();
+       for( Animal a :animales){
+           s.servicioHacerRuido((Comportamiento)a);
        }
-           
+       
+       //
+       ArrayList<Animal> animalito = new ArrayList<>();
+       animalito.add(new Pollo());
+       animalito.add(new Raton());
+       animalito.add(new Raton());
+       animalito.add(new Raton());
+       animalito.add(new Perro());
+       animalito.add(new Gato());
+            for( Animal a :animales){
+           s.servicioHacerRuido((Comportamiento)a);
+            }
+           animalito.get(0).setEdad(1);
+           System.out.println(animalito.get(0).getEdad());
        
        
        
